@@ -5,8 +5,8 @@
 - ~~Chapter 4.1 - 4.3~~
 - ~~Chapter 5.1 - 5.5~~ (except continuous random variable joint distributions)
 - ~~Chapter 7.1 - 7.3~~
-- Chapter 8.1, .2, .4
-- Chapter 0.1 - 9.3
+- ~~Chapter 8.1, .2, .4~~
+- ~~Chapter 9.1 - 9.3~~
 
 ### Chapter 1:
 Key Things to remember:
@@ -114,7 +114,7 @@ Key Things to Remember:
   - A linear combination of X.i's :: Y = a.i * X.i + ... + a.n * X.n = sum(i=1,
       n){a.i * X.i}
 
-### Chapter 7;
+### Chapter 7:
 Things to remember:
 - 7.1: Basic Properties of Confidence Intervals [N(mu, sigma=known)]:
   - 100(1 - alpha)% CI with mean mu when sigma is known :: (x.bar +- z.alpha/2 *
@@ -150,3 +150,59 @@ Things to remember:
   - Errors:
     - Type I Error: P(Reject H.0 | H.0 is true)
     - Type II Error: P(Don't reject H.0 | H.0 is false)
+- 8.2: Tests about Population Mean
+  - Case I: N(mu, sigma:known)
+    - Z = X.bar - mu.0/ (sigma/sqrt(n))
+    - Beta(mu') = P(H.0 not rejected | mu = mu')
+                = P(X.bar &lt; mu.0 + z.alpha * sigma/sqrt(n) | mu = mu')
+                = P(X.bar - mu' / (sigma / sqrt(n)) &lt; z.alpha + mu.0 - mu'/
+                (sigma / sqrt(n)) | mu = mu')
+                = Phi(z.alpha + mu.0 - mu' / (sigma / sqrt(n)))
+      - H.a: mu &gt; mu.0 :: Beta(mu')
+      - H.a: mu &lt; mu.0 :: 1 - Beta(mu' | -z.alpha)
+      - H.a: mu != mu.0 :: Beta(mu' | z.alpha/2) - Beta(mu' | -z/alpha/2)
+    - Case II: Large Samples:
+      - Z = X.bar - mu.0 / (S / sqrt(n))
+    - Case III: Normal Population Distribution by CLT
+      - T = X.bar - mu / (S / sqrt(n))
+- 8.4: P-values:
+  - P-value is a probability calculated given that the null hypothesis is true.
+  - Decision Rule: reject H.0 if p-value &lte; alpha else do not reject H.0
+  - It is the smallest value at which the null can be rejected.
+  - P-value for z Tests ::
+      | 1 - Phi(z) for upper tailed test
+      | Phi(z) for lower tailed test
+      | 2]1 - Phi(|z|)] for two tailed test
+  - P-value for t Tests :: Similar to z test, but with t-curve area, and df = n
+      -1
+
+### Chapter 9:
+Things to Remember:
+- 9.1: z Tests and Confidence Intervals for Two Population Means
+  - Basic Assumptions:
+    - [X] is a random sample from a distribution of mean mu.1 and variance
+      sigma.1^2
+    - [Y] is a random sample from a distribution with mean mu.2 and variance
+      sigma.2^2
+    - [X] and [Y] are independent of one another.
+  - E(X.bar - Y.bar) = mu.1 - mu.2
+  - sigma.(X.bar-Y.bar) = sqrt([sigma.1^2 / m] + [sigma.2^2 / n])
+  - Z = X.bar - Y.bar - (mu.1 - mu.2) / sqrt([sigma.1^2 / m] + [sigma.2^2 / n])
+  - Choosing Beta :: Similar to Chapter 8; substitute mu's for delta's
+- 9.2: Two-Sample t Test and Confidence Interval
+  - When population distributions are both normal, the standardized variable T
+    has a t distribution nu = [(se.1)^2 + (se.2)^2]^2 / [(se.1)^4 / m-1] +
+    [(se.2)^4 / n-1] where se.1 = s.1 / sqrt(m), se.2 = s.2 / sqrt(n); rounds
+    down to nearest integer.
+  - two-sample t confidence interval for mu.1 - mu.2 :: x.bar - y.bar +
+    t.alpha/2 * sqrt(s.1^2/m + s.2^2/n)
+  - Pooled t Procedures:
+    - S.p^2 = (m-1)/(m+n-2) * s.1^2 + (n-1)/(m+n-2) * s.2^2
+- 9.3: Analysis of Paired Data:
+  - The Paired t Test:
+    - H.0: mu.0 = delta.0 | mu.0 = mu.1 - mu.2
+    - t = d.bar - mu.0 / (s.0 / sqrt(n)) | d.bar and s.0 are the sample mean and
+      standard deviation, respectively, of the d.i's
+    - Paired t CI for mu.0 :: d.bar +- t.alpha/2,n-1 * s.0 / sqrt(n)
+    - V(X.bar - Y.bar) = V(D.bar) = (sigma.1^2 + sigma.2^2 - 2 * rho * sigma.1 *
+      sigma.2) / n
