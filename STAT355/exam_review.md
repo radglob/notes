@@ -180,11 +180,11 @@ Things to remember:
 Things to Remember:
 - 9.1: z Tests and Confidence Intervals for Two Population Means
   - Basic Assumptions:
-    - [X] is a random sample from a distribution of mean mu.1 and variance
+    - [ X ] is a random sample from a distribution of mean mu.1 and variance
       sigma.1^2
-    - [Y] is a random sample from a distribution with mean mu.2 and variance
+    - [ Y ] is a random sample from a distribution with mean mu.2 and variance
       sigma.2^2
-    - [X] and [Y] are independent of one another.
+    - [ X ] and [ Y ] are independent of one another.
   - E(X.bar - Y.bar) = mu.1 - mu.2
   - sigma.(X.bar-Y.bar) = sqrt([sigma.1^2 / m] + [sigma.2^2 / n])
   - Z = X.bar - Y.bar - (mu.1 - mu.2) / sqrt([sigma.1^2 / m] + [sigma.2^2 / n])
