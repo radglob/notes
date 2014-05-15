@@ -1,10 +1,10 @@
 ## Sections to Cover
-- Chapter 1 [COMPLETED]
-- Chapter 2.1 - 2.5 [COMPLETED]
-- Chapter 3.1 - 3.4 [COMPLETED]
-- Chapter 4.1 - 4.3 [COMPLETED]
-- Chapter 5.1 - 5.5 (except continuous random variable joint distributions) [COMPLETED]
-- Chapter 7.1 - 7.3 [COMPLETED]
+- ~~Chapter 1~~
+- ~~Chapter 2.1 - 2.5~~
+- ~~Chapter 3.1 - 3.4~~
+- ~~Chapter 4.1 - 4.3~~
+- ~~Chapter 5.1 - 5.5~~ (except continuous random variable joint distributions)
+- ~~Chapter 7.1 - 7.3~~
 - Chapter 8.1, .2, .4
 - Chapter 0.1 - 9.3
 
