@@ -1,4 +1,4 @@
-# CMSC 441 - Introduction - 08/29/2014
+# CMSC 441 - Introduction - 08/28/2014
 
 ## TODOS:
 * Put dates for quizzes, exams into calendar.
