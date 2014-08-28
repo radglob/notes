@@ -1,7 +1,7 @@
 # Introduction - 08/27/2014
 
 ## TODOS:
-* Get the book...
+* ~~Get the book...~~
 
 ## What's the Internet? Nuts and Bolts View
 * millions of connected devices, in multiple tiers.
