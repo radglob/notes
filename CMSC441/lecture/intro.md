@@ -4,6 +4,7 @@
 * Put dates for quizzes, exams into calendar.
 * Read chapters 1.1 - 3.2, review proof by induction.
 * HW1 due 09/04/2014
+* Create graph drawings, post and link.
 
 ## How do you prove correctness in algorithms?
 * Proof by induction.
@@ -12,7 +13,7 @@
     * Also useful for non-recursive algorithms, like [insertion sort](http://en.wikipedia.org/wiki/Insertion_Sort).
 * Loop invariant: a statement that you want to be true at the top of a loop.
     After every iteration, you still want it to be true.
-    * `A[1, j -1]` is the original `A[1, j-1]` in sorted order.
+    * `A[1, j-1]` is the original `A[1, j-1]` in sorted order.
 
 ## Induction for Problem Solving
 Pirates Succession: Pirates go to a beach and find 63 pieces of gold. There are
@@ -30,8 +31,14 @@ Captain  |    |    |    |    |    | 60
 5th Mate | 63 |  0 |  1 |  0 |  1 |  0
 6th Mate | 0  |  1 |  0 |  1 |  0 |  1
 
+NOTE: Generate an induction hypothesis, and work your way up.
+
 ## Tournament Graphs
 Assume a round robin tournament with no ties.
-Claim: There is always a spanning tree.
 
+Claim: There is always a spanning chain.
 
+Induction hypothesis - P(n): Every tournament graph with `n` vertices has a spanning
+chain.
+
+P(n) => P(n+1): Given a tournament graph with `n+1` vertices, ...
