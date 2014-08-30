@@ -115,3 +115,80 @@ information.
 
 ### 1.4.2 Data-Definition Language
 These are used to specify the structure and access methods of a database.
+* **data storage and definition** languages are used to specify structure and
+    access methods.
+
+Data values stored in a databass must satisfy **consistency restraints**, which
+include:
+* domain constraints: domain of possible values associated with each attribute.
+    Most elementary consistency restraint.
+* referential integrity: ensuring that a relationship has the correct value that
+    it should.
+* assertions: any condition the database must always satisfy. Domain constraints
+    and referential integrity are special types of assertions.
+* authorization: access levels for users - read authorization, insert
+    authorization, update authorization, delete authorization.
+
+## 1.5 Relational Databases
+A relational database is based on a relational model and uses a collection of
+tables to represent data and relationships between data. This is an example of a
+record-based model.
+
+### 1.5.1 Tables
+Each table has multiple columns and each column has a unique name.
+
+### 1.5.2 Data-Manipulation Language
+The SQL query language is nonprocedural. It takes several tables as inputs and
+returns a single table.
+
+### 1.5.3 Data-Definition Language
+SQL provides a rich DDL for defining tables, integrity constraints, assertions,
+etc. The following statement is an example.
+
+```sql
+create table department
+    (dept_name  char(20),
+     building   char(15),
+     budget     numeric(12,2));
+```
+
+### 1.5.4 Database Access from Application Programs
+SQL is not Turing complete. It also does not support input from users, outputs
+to displays, or communication over the network. Applications are used to
+interact with a database in these ways. Examples include:
+* APIs that send DML and DDL statements to a database and return the results.
+* The Open Database Connectivity (ODBC) standard is an API that uses C. The Java
+    Database Connectivity (JDBC) standard is similar, but uses Java.
+
+## 1.6 Database Design
+Database design involves the design of database schema. Modeling a database for
+the needs of an enterprise requires attention to a broad set of issues.
+
+### 1.6.1 Design Process
+This step involves *what* attributes we wish to capture in the database, and
+*how* to group the data to form tables.
+
+Two ways to tackle the problem:
+* Use an entity-relationship model.
+* Employ normalization that takes the set of all attributes and generates a set
+    of tables.
+
+A fully developed conceptual schema indicates the functional requirements of the
+enterprise. These describe kinds of operations (transactions). The process of
+moving from an abstract data model to implementation is called the
+**logical-design phase**. Physical features are implemented in the **physical design phase**.
+
+### 1.6.3 The Entity-Relationship Model
+The E-R data model uses a collection of simple objects (*entities*) and
+*relationships* among these objects to describe the data. Entities have
+attributes. A relationship is an association among several entities. A set of
+all entities is an *entity set* and a set of all relationships is called a
+*relationship set*. Overall logical design can be expressed using the 
+**Unified Modeling Language** (UML).
+
+### 1.6.4 Normalization
+Another method of designing a relational database is normalization. This process
+generates a set of relation schemas that allow storage without unnecessary
+redundancy.
+
+
