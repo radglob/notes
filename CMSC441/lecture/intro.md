@@ -1,7 +1,7 @@
 # CMSC 441 - Introduction - 08/28/2014
 
 ## TODOS:
-* Put dates for quizzes, exams into calendar.
+* ~~Put dates for quizzes, exams into calendar.~~
 * Read chapters 1.1 - 3.2, review proof by induction.
 * HW1 due 09/04/2014
 * Create graph drawings, post and link.
