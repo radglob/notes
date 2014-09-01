@@ -40,7 +40,7 @@ The mesh of packet switches and links that interconnect the Internet's end
 systems. Here, most packet switches use store-and-forward transmission at inputs
 to links.
 
-end-to-end delay: `d<sub>end-to-end</sub> = N * L/R`
+end-to-end delay: d<sub>end-to-end</sub> = `N * L/R`
 
 Packet switches have multiple links attached to them. For each link, there is an
 output buffer. If an incoming packet needs to go to a certain link, but it is
