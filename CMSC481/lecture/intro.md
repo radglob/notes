@@ -2,6 +2,7 @@
 
 ## TODOS:
 * ~~Get the book...~~
+* ~~Read chapters 1.1 - 1.8~~
 
 ## What's the Internet? Nuts and Bolts View
 * millions of connected devices, in multiple tiers.
