@@ -1,12 +1,14 @@
 # CMSC 461 - Introduction - 08/27/2014
 
 Professor Name: Jennifer Sleeman
+
 Email: jsleem1@umbc.edu
+
 Website: [here](http://www.csee.umbc.edu/~jsleem1/courses/461)
 
 ## TODOS:
-* Read the syllabus.
-* Read chapter 1, 2, 6.1 by Wednesday, 09/03/2014.
+* ~~Read the syllabus.~~
+* ~~Read chapter 1, 2, 6.1 by Wednesday, 09/03/2014.~~
 * Read about Oracle data dictionary.
 
 ## Databases are changing...
