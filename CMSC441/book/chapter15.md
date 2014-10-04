@@ -26,5 +26,58 @@ Given a rod of length *n* inches and a table of prices *p<sub>i</sub>* for *i* =
 1, 2, ... *n*, determine the maximum revenue *r<sub>n</sub>* obtainable by
 cutting up the rod and selling the pieces.
 
-|      length *i*       | 1 | 2 | 3 | 4 | 5  | 6  | 7  |  8 | 9  | 10 |
-| price *p<sub>i</sub>* | 1 | 5 | 8 | 9 | 10 | 17 | 17 | 20 | 24 | 30 |
+We solve these problems by decomposing the original problem into smaller
+versions of the same problem. Optimal solutions are derived by incorporating
+optimal solutions from subproblems.
+
+The problem can be described in a recursive top-down manner:
+```
+Cut-Rod(p, n)
+if n == 0
+  return 0
+q = -infinity
+for i = 1 to n
+  q = max(q, p[i] + Cut-Rod(p, n-i))
+return q
+```
+
+One issue with this implementation is that it solves the same subproblems over
+and over again. As such, the amount of work grows rapidly as *n* grows.
+
+Using dynamic programming, we can define a much more efficient implementation.
+There are two ways we do this: **top-down with memoization** and **bottom-up**.
+
+In the former, we solve in the same recursive manner, but modify the algorithm
+to save the result of each subproblem. In the latter, we sort our subproblems by
+size and solve them smallest to largest.
+
+```
+Memoized-Cut-Rod(p, n)
+let r[0..n] = []
+for i = 0 to n
+  r[i] = -infinity
+return Memoized-Cut-Rod-Aux(p, n, r)
+
+Memoized-Cut-Rod-Aux(p, n, r)
+if r[n] >= 0
+  return r[n]
+if n == 0
+  q = 0
+else q = -infinity
+  for i = 1 to n
+    q = max(q, p[i] + Memoized-Cut-Rod-Aux(p, n-i, r))
+r[n] = q
+return q
+
+Bottom-Up-Cut-Rod(p, n)
+let r[0..n] = []
+r[0] = 0
+for j = 1 t n
+  q = -infinity
+  for i = 1 to j
+    q = max(q, p[i] + r[j-i])
+  r[j] = q
+return r[n]
+```
+
+
