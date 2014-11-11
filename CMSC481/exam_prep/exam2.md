@@ -84,3 +84,18 @@ VoIP | proprietary | UDP or TCP
 Network Management | SNMP | typically UDP
 Routing protocol | RIP | typically UDP
 Name translation | DNS | typically UDP
+
+### UDP Segment Structure
+A UDP segment contains a source port number (16 bits), destination port number
+(16 bits), a length value, checksum and the data being sent. The checksum is
+used for error checking. The 1's complement of all 16-bit words in the segment
+is calculated. At the reciever, all words and the checksum are summed. If there
+are no errors, the sum will be 1111111111111111. UDP implements error checking
+because there is no guarantee that other layers will. Additionally, bit errors
+could be introduced during storage. This is called the end-to-end principle,
+which states that certain functionality (such as error checking) must be
+implemented on an end-to-end basis.
+
+## Section 3.4: Principles of Reliable Data Transfer
+This section is being skipped, as the pertinent information is mostly tied up in
+FSMs and other diagrams. Go peruse it as needed.
